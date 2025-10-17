@@ -1,7 +1,6 @@
 import { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-// Imagens que continuam dentro de src/assets/img
 import logoMark from "./assets/img/logo-mark.svg";
 import linhaCurva from "./assets/img/linhacurva.svg";
 import iconUpload from "./assets/img/icon-upload.svg";
@@ -40,31 +39,31 @@ function App() {
 
   return (
     <div
-      className="bg-center bg-cover w-full h-full"
-      style={{ backgroundImage: `url(/background-mobile.png)` }} // imagem da public
+      className="bg-center bg-cover w-full h-full md:h-full lg:h-full "
+      style={{ backgroundImage: `url(/background-mobile.png)` }} 
     >
       <div className="flex justify-center items-center pt-10 p-5 gap-3 relative">
         <img src={logoMark} alt="logo" />
-        <h1 className="text-stone-50 font-bold text-2xl">Gerador de Ingresso</h1>
+        <h1 className="text-stone-50 font-bold text-2xl md:text-4xl">Gerador de Ingresso</h1>
         <img
-          className="absolute w-30 left-70"
+          className="absolute w-30 left-70 md:left-150 "
           src={linhaCurva}
           alt="linha curva"
         />
       </div>
 
-      <div className="w-[80%] m-auto mt-2">
-        <p className="mb-2 text-[14px] text-stone-50">
+      <div className="w-[80%] m-auto mt-2 md:text-center  ">
+        <p className="mb-2 text-[14px] text-stone-50 md:text-[18px]">
           Preencha os campos abaixo e envie uma foto para gerar seu ingresso personalizado.
         </p>
-        <p className="mb-8 text-[14px] text-stone-50/50">
+        <p className="mb-8 text-[14px] text-stone-50/50 md:text-[16px]">
           Após preencher todos os dados, clique em "Gerar Ingresso" para visualizar e baixar.
         </p>
       </div>
 
       <div
         onClick={handleClick}
-        className="flex flex-col justify-center items-center bg-stone-50/10 w-[80%] rounded-xl h-30 m-auto gap-3 cursor-pointer hover:scale-102 border-3 border-dashed border-stone-50/20"
+        className="flex flex-col justify-center items-center bg-stone-50/10 w-[80%] rounded-xl h-30 m-auto gap-3 cursor-pointer hover:scale-102 border-3 border-dashed border-stone-50/20 md:w-[50%]"
       >
         {preview ? (
           <img
@@ -94,7 +93,7 @@ function App() {
         accept="image/*"
       />
 
-      <div className="flex flex-col gap-1 w-[80%] m-auto mt-10">
+      <div className="flex flex-col gap-1 w-[80%] m-auto mt-10 md:w-[50%]">
         <label className="text-stone-50 text-xs">Nome do Evento</label>
         <input
           name="evento"
@@ -106,7 +105,7 @@ function App() {
         />
       </div>
 
-      <div className="flex flex-col gap-1 w-[80%] m-auto mt-4">
+      <div className="flex flex-col gap-1 w-[80%] m-auto mt-4 md:w-[50%]">
         <label className="text-stone-50 text-xs">Data do evento</label>
         <input
           name="data"
@@ -118,7 +117,7 @@ function App() {
         />
       </div>
 
-      <div className="flex flex-col gap-1 w-[80%] m-auto mt-4">
+      <div className="flex flex-col gap-1 w-[80%] m-auto mt-4 md:w-[50%]">
         <label className="text-stone-50 text-xs">Local do evento</label>
         <input
           name="local"
@@ -130,7 +129,7 @@ function App() {
         />
       </div>
 
-      <div className="flex flex-col gap-1 w-[80%] m-auto mt-4">
+      <div className="flex flex-col gap-1 w-[80%] m-auto mt-4 md:w-[50%]">
         <label className="text-stone-50 text-xs">Nome do Cliente</label>
         <input
           name="cliente"
@@ -142,7 +141,7 @@ function App() {
         />
       </div>
 
-      <div className="flex flex-col gap-1 w-[80%] m-auto mt-4 pb-8">
+      <div className="flex flex-col gap-1 w-[80%] m-auto mt-4 pb-8 md:w-[50%]">
         <label className="text-stone-50 text-xs">E-mail do Cliente</label>
         <input
           name="email"
@@ -163,7 +162,7 @@ function App() {
         </button>
       </div>
 
-      <img src={arcos} alt="arcos" />
+      <img className="md:w-[87%] lg:w-[60%] " src={arcos} alt="arcos" />
     </div>
   );
 }
