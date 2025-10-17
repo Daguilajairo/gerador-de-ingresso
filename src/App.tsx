@@ -1,9 +1,8 @@
 import { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-
+// Imagens que continuam dentro de src/assets/img
 import logoMark from "./assets/img/logo-mark.svg";
-import backgroundMobile from "./assets/img/background-mobile.png";
 import linhaCurva from "./assets/img/linhacurva.svg";
 import iconUpload from "./assets/img/icon-upload.svg";
 import arcos from "./assets/img/arcos.svg";
@@ -42,7 +41,7 @@ function App() {
   return (
     <div
       className="bg-center bg-cover w-full h-full"
-      style={{ backgroundImage: `url(${backgroundMobile})` }}
+      style={{ backgroundImage: `url(/background-mobile.png)` }} // imagem da public
     >
       <div className="flex justify-center items-center pt-10 p-5 gap-3 relative">
         <img src={logoMark} alt="logo" />
@@ -95,7 +94,6 @@ function App() {
         accept="image/*"
       />
 
-      
       <div className="flex flex-col gap-1 w-[80%] m-auto mt-10">
         <label className="text-stone-50 text-xs">Nome do Evento</label>
         <input
