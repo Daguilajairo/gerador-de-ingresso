@@ -78,7 +78,7 @@ function Ingresso() {
           seu Ingresso está pronto!
         </h2>
         <h3 className="text-stone-50 text-center text-sm">
-          Clique na <span className="text-red-300/90 font-semibold">imagem</span> para salvar em seu dispositivo
+          Print a <span className="text-red-300/90 font-semibold">Tela</span> para salvar em seu dispositivo
         </h3>
       </div>
 
@@ -94,7 +94,7 @@ function Ingresso() {
         />
         <img className="w-[80%] max-w-[500px]" src={patternTicket} alt="Ticket" />
 
-        <div className="absolute top-12 left-1/2 transform -translate-x-1/2 text-center text-stone-50">
+        <div className="absolute top-12 left-43 transform -translate-x-1/2 text-center text-stone-50">
           <h1 className="text-xl font-bold">{data.evento}</h1>
           <div className="flex gap-2 text-stone-50/60 text-[10px] pt-1 justify-center">
             <p>{data.data}</p>
@@ -103,7 +103,7 @@ function Ingresso() {
           </div>
         </div>
 
-        <div className="flex gap-2 absolute top-32 left-1/2 w-[57%] transform -translate-x-1/2 text-stone-50 items-center">
+        <div className="flex gap-2 absolute top-29 left-1/2 w-[57%] transform -translate-x-1/2 text-stone-50 items-center">
           {avatar && (
             <img className="w-10 h-10 rounded-full object-cover" src={avatar} alt="avatar" />
           )}
